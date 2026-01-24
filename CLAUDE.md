@@ -15,10 +15,9 @@
 ```
 .claude/skills/
 ├── commit/       # 커밋 도우미
-└── dev/          # 개발 skills
-    ├── api/          # Spring Boot API 개발
-    ├── api-spec/     # OpenAPI 스펙 작업
-    └── app/          # React Native 기능 개발
+├── api/          # Spring Boot API 개발
+├── api-spec/     # OpenAPI 스펙 작업
+└── app/          # React Native 기능 개발
 ```
 
 ## Skills 사용 시 참고
