@@ -10,7 +10,11 @@
       "Bash(./gradlew build:*)",
       "Bash(date:*)",
       "Bash(./gradlew test:*)",
-      "Bash(npm run lint:*)"
+      "Bash(npm run lint:*)",
+      "Bash(ls:*)",
+      "Bash(./gradlew compileKotlin:*)",
+      "Bash(./gradlew ktlintCheck:*)",
+      "Bash(git mv:*)"
     ]
   }
 }
