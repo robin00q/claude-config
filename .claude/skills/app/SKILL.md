@@ -5,9 +5,13 @@ description: React Native 기능 개발 워크플로우. API 타입 동기화 �
 
 **새 기능 개발 시 아래 Phase 순서대로 진행**
 
-# 공통 규칙 로드
+**⚠️ 요청된 작업에 해당하는 Phase부터 시작. (예: "화면만 수정해주세요" → Phase 3부터 시작)**
+
+# 공통 규칙 로드 (필수)
 
 ---
+
+**⚠️ Phase 진행 전 반드시 읽을 것. 공통 규칙을 읽지 않으면 다음 Phase 진행 불가.**
 
 - `Read("references/common/project-structure.md")` - 프로젝트 구조
 - `Read("references/common/design-tokens.md")` - 디자인 토큰 사용법
