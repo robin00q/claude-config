@@ -2,3 +2,6 @@
 crossfit-app/
 crossfit-api/
 crossfit-api-spec/
+
+# IDE
+.idea/
