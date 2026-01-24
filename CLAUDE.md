@@ -14,11 +14,11 @@
 
 ```
 .claude/skills/
-├── commit/           # 커밋 도우미
-└── dev/              # 개발 skills
-    ├── api-spec/         # OpenAPI 스펙 작업
-    ├── rn-feature-dev/   # React Native 기능 개발
-    └── spring-be-api-dev/ # Spring Boot API 개발
+├── commit/       # 커밋 도우미
+└── dev/          # 개발 skills
+    ├── api-spec/     # OpenAPI 스펙 작업
+    ├── be-api/       # Spring Boot API 개발
+    └── fe-app/       # React Native 기능 개발
 ```
 
 ## Skills 사용 시 참고
@@ -27,7 +27,7 @@
 
 | Skill | 작업 디렉토리 | 용도 |
 |-------|-------------|------|
-| `/spring-be-api-dev` | `*-api/` | Spring Boot 백엔드 개발 |
-| `/rn-feature-dev` | `*-app/` | React Native 앱 개발 |
+| `/be-api` | `*-api/` | Spring Boot 백엔드 개발 |
+| `/fe-app` | `*-app/` | React Native 앱 개발 |
 | `/api-spec` | `*-api-spec/` | OpenAPI 스펙 작성 |
 | `/commit` | 전체 | 변경사항 커밋 (멀티 디렉토리 지원) |

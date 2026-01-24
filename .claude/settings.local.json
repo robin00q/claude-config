@@ -10,7 +10,6 @@
       "Bash(./gradlew build:*)",
       "Bash(date:*)",
       "Bash(./gradlew test:*)",
-      "Bash(git push:*)",
       "Bash(npm run lint:*)"
     ]
   }

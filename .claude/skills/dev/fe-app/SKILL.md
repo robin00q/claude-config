@@ -1,5 +1,5 @@
 ---
-name: rn-feature-dev
+name: fe-app
 description: React Native 기능 개발 워크플로우. API 타입 동기화 → 서비스 → 상수 → 화면 → 컴포넌트 → 테스트 → 문서화.
 ---
 
