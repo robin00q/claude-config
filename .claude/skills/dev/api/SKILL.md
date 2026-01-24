@@ -1,5 +1,5 @@
 ---
-name: be-api
+name: api
 description: 개발 워크플로우 스킬. 코드 구현 → 테스트 → 문서화 순서로 진행.
              Hexagonal Architecture 준수. 새 기능 구현, API 엔드포인트 추가 시 사용.
 ---
