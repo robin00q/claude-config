@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git submodule:*)",
+      "Bash(npm run generate:api:*)",
+      "Bash(npm run type-check:*)",
+      "Bash(npm test:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(./gradlew build:*)",
+      "Bash(date:*)",
+      "Bash(./gradlew test:*)",
+      "Bash(git push:*)",
+      "Bash(npm run lint:*)"
+    ]
+  }
+}

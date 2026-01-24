@@ -1,0 +1,4 @@
+# 서브 프로젝트 (각각 별도 git 레포)
+crossfit-app/
+crossfit-api/
+crossfit-api-spec/
