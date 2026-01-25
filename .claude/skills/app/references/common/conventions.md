@@ -95,3 +95,59 @@ import { CaretDown, CalendarBlank, Cube } from 'phosphor-react-native'
 
 - 공식 문서: https://phosphoricons.com
 - weight 옵션: `thin`, `light`, `regular`, `bold`, `fill`, `duotone`
+
+## 바텀시트 (Bottom Sheet)
+
+---
+
+**Animated.spring 필수 사용** (Modal의 기본 slide 애니메이션 사용 금지)
+
+```typescript
+import { Modal, Animated, Dimensions } from 'react-native'
+import { useEffect, useRef } from 'react'
+import { useSafeAreaInsets } from 'react-native-safe-area-context'
+
+const SCREEN_HEIGHT = Dimensions.get('window').height
+
+function BottomSheet({ visible, onClose, children }) {
+  const insets = useSafeAreaInsets()
+  const slideAnim = useRef(new Animated.Value(SCREEN_HEIGHT)).current
+
+  useEffect(() => {
+    if (visible) {
+      // 열기: 스프링 애니메이션
+      Animated.spring(slideAnim, {
+        toValue: 0,
+        useNativeDriver: true,
+        tension: 65,
+        friction: 11,
+      }).start()
+    } else {
+      // 닫기: 타이밍 애니메이션
+      Animated.timing(slideAnim, {
+        toValue: SCREEN_HEIGHT,
+        duration: 250,
+        useNativeDriver: true,
+      }).start()
+    }
+  }, [visible])
+
+  return (
+    <Modal visible={visible} transparent animationType="fade">
+      <Animated.View
+        style={{
+          transform: [{ translateY: slideAnim }],
+          paddingBottom: Math.max(insets.bottom, Spacing.xl),
+        }}
+      >
+        {children}
+      </Animated.View>
+    </Modal>
+  )
+}
+```
+
+**핵심 설정:**
+- Modal: `animationType="fade"` (배경만 페이드)
+- 시트: `Animated.spring` (tension: 65, friction: 11)
+- SafeArea: `useSafeAreaInsets()`로 하단 여백 보장
