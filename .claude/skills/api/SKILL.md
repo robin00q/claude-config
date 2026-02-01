@@ -22,7 +22,7 @@ description: 개발 워크플로우 스킬. 코드 구현 → 테스트 → 문�
 ---
 
 1. **Controller 작성 여부 확인** (AskUserQuestion)
-2. **Controller 작성 시**: 서브모듈 로컬 경로 질문 (기본값: `../crossfit-api-spec/`)
+2. **Controller 작성 시**: 서브모듈 로컬 경로 질문 (기본값: `../wodly-api-spec/`)
 
 # Phase 1: Domain 구현
 
@@ -95,7 +95,7 @@ description: 개발 워크플로우 스킬. 코드 구현 → 테스트 → 문�
    - `{Entity}Fixtures.kt`
    - `{Command}Fixtures.kt`
 
-3. **경로**: `src/testFixtures/kotlin/crossfit/domain/{aggregate}/`
+3. **경로**: `src/testFixtures/kotlin/wodly/domain/{aggregate}/`
 
 # Phase 7: 테스트 작성
 

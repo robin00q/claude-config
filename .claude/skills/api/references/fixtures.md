@@ -4,7 +4,7 @@
 
 ## 기본 정보
 
-**위치**: `src/testFixtures/kotlin/crossfit/domain/{aggregate}/`
+**위치**: `src/testFixtures/kotlin/wodly/domain/{aggregate}/`
 **패턴**: Object Mother
 
 ---
@@ -12,7 +12,7 @@
 ## 디렉토리 구조
 
 ```
-src/testFixtures/kotlin/crossfit/
+src/testFixtures/kotlin/wodly/
 └── domain/
     └── {aggregate}/
         ├── {Entity}Fixtures.kt
