@@ -3,7 +3,7 @@
 ---
 
 ```
-src/main/kotlin/crossfit/
+src/main/kotlin/wodly/
 ├── domain/
 │   ├── BaseEntity.kt
 │   ├── exception/BusinessException.kt
@@ -23,7 +23,8 @@ src/main/kotlin/crossfit/
 │   │   │   ├── *Mutation.kt
 │   │   │   └── *Query.kt
 │   │   └── required/
-│   │       └── *Repository.kt
+│   │       ├── *Repository.kt
+│   │       └── *Sender.kt          # 외부 서비스 포트
 │   └── facade/{domain}/
 │       └── *Facade.kt
 │
@@ -63,3 +64,14 @@ src/main/kotlin/crossfit/
 - JPA는 외부 의존성으로 간주하지 않음
 - Entity는 `domain/`에 직접 위치
 - JpaRepository는 `required/` 포트에 위치
+
+## 외부 서비스 Adapter
+
+---
+
+외부 API 호출 시 Port/Adapter 패턴 사용
+
+| 위치 | 역할 |
+|------|------|
+| `required/{Interface}.kt` | 인터페이스 (Port) |
+| `adapter/out/{service}/{Impl}.kt` | 구현체 (Adapter) |
