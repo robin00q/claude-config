@@ -7,6 +7,8 @@ description: React Native 기능 개발 워크플로우. API 타입 동기화 �
 
 **⚠️ 요청된 작업에 해당하는 Phase부터 시작. (예: "화면만 수정해주세요" → Phase 3부터 시작)**
 
+**⚠️ 코드 수정 시 Phase 6 (문서화) 필수. 수정한 파일의 CLAUDE.md 반드시 업데이트.**
+
 # 공통 규칙 로드 (필수)
 
 ---
@@ -91,9 +93,11 @@ description: React Native 기능 개발 워크플로우. API 타입 동기화 �
 
 3. **경로**: `src/{domain}/__tests__/`
 
-# Phase 6: 문서화
+# Phase 6: 문서화 (필수)
 
 ---
+
+**⚠️ 이 단계를 건너뛰지 마세요. 코드 수정 시 관련 CLAUDE.md 반드시 업데이트.**
 
 **각 디렉토리 CLAUDE.md 작성/업데이트**:
 
@@ -120,3 +124,5 @@ description: React Native 기능 개발 워크플로우. API 타입 동기화 �
    ```
 
 3. **수동 확인**: 화면 동작, 다크모드, 에러 케이스
+
+4. **문서화 확인**: 수정한 코드의 CLAUDE.md 업데이트 완료 여부
