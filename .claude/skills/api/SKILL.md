@@ -97,9 +97,11 @@ description: 개발 워크플로우 스킬. 코드 구현 → 테스트 → 문�
 
 3. **경로**: `src/testFixtures/kotlin/wodly/domain/{aggregate}/`
 
-# Phase 7: 테스트 작성
+# Phase 7: 테스트 작성 (필수)
 
 ---
+
+**⚠️ 테스트 없이 구현을 완료하지 말 것. 모든 구현 코드에는 테스트 필수.**
 
 1. **레퍼런스 로드**: `Read("references/testing.md")`
 
@@ -111,6 +113,11 @@ description: 개발 워크플로우 스킬. 코드 구현 → 테스트 → 문�
    | Service | `@SpringBootTest` | `test/.../application/service/{aggregate}/provided/` |
    | Facade | `@SpringBootTest` | `test/.../application/facade/{domain}/` |
    | Controller | `@WebMvcTest` | `test/.../adapter/in/webapi/app/{aggregate}/` |
+
+3. **필수 테스트 케이스**:
+   - 정상 케이스 (happy path)
+   - 예외/에러 케이스
+   - 경계값 케이스 (필요시)
 
 # Phase 8: 문서화
 
