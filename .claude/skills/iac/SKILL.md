@@ -14,7 +14,7 @@ description: Terraform 인프라 개발 워크플로우. 리소스 설계 → �
 
 **⚠️ 모든 Phase에서 반드시 준수. 보안에 매우 민감한 프로젝트.**
 
-- **포트**: 필요한 포트만 최소 개방. SSH(22) 비공개 (Lightsail 콘솔 브라우저 SSH 사용)
+- **포트**: 필요한 포트만 최소 개방. SSH(22)는 키 인증만 허용 (브라우저 SSH + CI/CD용)
 - **접근 제어**: DB `publicly_accessible = false`, 내부 통신만 허용
 - **민감 정보**: 비밀번호/시크릿은 반드시 `sensitive = true` 변수로 분리
 - **커밋 금지**: `terraform.tfvars`, `*.tfstate` 절대 git 커밋 금지
