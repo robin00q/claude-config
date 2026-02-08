@@ -92,6 +92,40 @@ data class RegisterBoxCommand(
 )
 ```
 
+## DDL 컨벤션
+
+---
+
+### 컬럼 순서
+
+`id` → `created_at` → `updated_at` → 나머지 컬럼
+
+### 타입 매핑
+
+| Kotlin | MySQL |
+|--------|-------|
+| Long (PK/FK) | `BIGINT UNSIGNED` |
+| LocalDateTime | `DATETIME` |
+| Boolean | `TINYINT(1)` |
+| String | `VARCHAR(255)` |
+| String (@Lob/TEXT) | `TEXT` |
+| LocalDate | `DATE` |
+| Int | `INT` |
+| Double | `DOUBLE` |
+
+### 네이밍 규칙
+
+| 구분 | 형식 | 예시 |
+|------|------|------|
+| 인덱스 | `idx_{컬럼1}_{컬럼2}` | `idx_member_id_workout_date` |
+| 유니크 | `uk_{컬럼1}_{컬럼2}` | `uk_workout_id_member_id` |
+
+### 기타
+
+- FK constraint 생략 (JPA 연관관계만 유지)
+- Boolean: `columnDefinition = "TINYINT(1)"` 명시
+- LocalDateTime: `columnDefinition = "DATETIME"` 명시
+
 ## Exception 작성
 
 ---
