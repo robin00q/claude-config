@@ -47,7 +47,7 @@ Terraform 코드 변경 시 CLAUDE.md 문서 생성/업데이트 가이드
 
 | 리소스 | 이름 | 스펙 | 월 비용 |
 |--------|------|------|---------|
-| Lightsail Instance | wodly-api | micro, Ubuntu 22.04 | $5 |
+| Lightsail Instance | wodly-api | micro_3_0 (2 vCPU, 1GB RAM, 40GB SSD), Ubuntu 22.04 | $7 |
 
 ## 주요 변수
 
@@ -91,5 +91,5 @@ resource "aws_lightsail_instance" "api" {
 
 | 리소스 | 이름 | 스펙 | 월 비용 |
 |--------|------|------|---------|
-| Lightsail Instance | wodly-api | micro, Ubuntu 22.04 | $5 |
+| Lightsail Instance | wodly-api | micro_3_0 (2 vCPU, 1GB RAM, 40GB SSD), Ubuntu 22.04 | $7 |
 ```
