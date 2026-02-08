@@ -14,7 +14,9 @@
       "Bash(./gradlew compileKotlin:*)",
       "Bash(./gradlew ktlintCheck:*)",
       "Bash(git mv:*)",
-      "Bash(find:*)"
+      "Bash(find:*)",
+      "Bash(./gradlew compileTestKotlin:*)",
+      "Bash(jar tf:*)"
     ]
   }
 }
