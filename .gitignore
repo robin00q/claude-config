@@ -1,7 +1,5 @@
-# 서브 프로젝트 (각각 별도 git 레포)
-wodly-app/
-wodly-api/
-wodly-api-spec/
+# 서브 프로젝트 및 worktree (각각 별도 git 레포)
+wodly-*/
 
 # IDE
 .idea/

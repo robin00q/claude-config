@@ -126,3 +126,12 @@ description: React Native 기능 개발 워크플로우. API 타입 동기화 �
 3. **수동 확인**: 화면 동작, 다크모드, 에러 케이스
 
 4. **문서화 확인**: 수정한 코드의 CLAUDE.md 업데이트 완료 여부
+
+# Phase 8: 코드리뷰
+
+---
+
+1. **레퍼런스 로드**: `Read("references/code-review.md")`
+2. `git diff main...HEAD --name-only` 로 변경 파일 목록 확보
+3. 레퍼런스의 프롬프트 템플릿에 파일 목록을 채워서 Task 도구로 코드리뷰 에이전트 실행 (`subagent_type=general-purpose`)
+4. 리뷰 결과를 사용자에게 전달

@@ -58,10 +58,13 @@ description: 개발 워크플로우 스킬. 코드 구현 → 테스트 → 문�
 
 1. **레퍼런스 로드**: `Read("references/facade-implementation.md")`
 
-2. **사용 조건**: 여러 Aggregate 조율 필요 시에만
+2. **사용 조건**:
+   - 여러 Aggregate 조율 필요 시
+   - Controller에서 ReadModel 반환 필요 시 (Read Facade)
 
 3. **작성 대상**:
-   - `{BusinessIntent}Facade`
+   - `{BusinessIntent}Facade` — 여러 Aggregate 조율
+   - `Get{Aggregate}Facade` + `{Aggregate}ReadModel` — 읽기 전용 ReadModel 반환
    - Input/Output nested class
 
 4. **경로**: `application/facade/{domain}/`
@@ -135,3 +138,12 @@ description: 개발 워크플로우 스킬. 코드 구현 → 테스트 → 문�
 **병렬 실행**:
 - `Read("references/checklist.md")` 후 확인
 - `./gradlew build`
+
+# Phase 10: 코드리뷰
+
+---
+
+1. **레퍼런스 로드**: `Read("references/code-review.md")`
+2. `git diff main...HEAD --name-only` 로 변경 파일 목록 확보
+3. 레퍼런스의 프롬프트 템플릿에 파일 목록을 채워서 Task 도구로 코드리뷰 에이전트 실행 (`subagent_type=general-purpose`)
+4. 리뷰 결과를 사용자에게 전달

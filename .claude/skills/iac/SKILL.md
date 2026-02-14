@@ -111,3 +111,12 @@ terraform apply   # 인프라 적용
 
 - 변경 대상 리소스 요약
 - 주의사항 (데이터 손실 가능성, 다운타임 등)
+
+# Phase 7: 코드리뷰
+
+---
+
+1. **레퍼런스 로드**: `Read("references/code-review.md")`
+2. `git diff main...HEAD --name-only` 로 변경 파일 목록 확보
+3. 레퍼런스의 프롬프트 템플릿에 파일 목록을 채워서 Task 도구로 코드리뷰 에이전트 실행 (`subagent_type=general-purpose`)
+4. 리뷰 결과를 사용자에게 전달

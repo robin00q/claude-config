@@ -99,3 +99,4 @@ class WorkoutService(
 2. **엔티티 수정 후 명시적 `save()` 호출 필수**
 3. **도메인 로직은 Entity에 위임**
 4. **CQRS 준수**: Mutation과 Query 분리
+5. **Query는 도메인 엔티티 반환** (ReadModel 변환은 Read Facade 담당)
