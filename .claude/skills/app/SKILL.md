@@ -9,6 +9,11 @@ description: React Native 기능 개발 워크플로우. API 타입 동기화 �
 
 **⚠️ 코드 수정 시 Phase 6 (문서화) 필수. 수정한 파일의 CLAUDE.md 반드시 업데이트.**
 
+**⚠️ 커밋 시 api-spec 서브모듈 포인터(commit SHA) 변경분을 반드시 포함할 것.**
+- 커밋 전 `git submodule update --remote api-spec` 실행하여 최신화
+- `git add api-spec`으로 서브모듈 포인터 staging
+- `git status`에서 `api-spec` 변경분이 staged 상태인지 확인 후 커밋
+
 # 공통 규칙 로드 (필수)
 
 ---
@@ -19,21 +24,26 @@ description: React Native 기능 개발 워크플로우. API 타입 동기화 �
 - `Read("references/common/design-tokens.md")` - 디자인 토큰 사용법
 - `Read("references/common/conventions.md")` - 코드 컨벤션
 
-# Phase 0: API 스펙 동기화
+# Phase 0: 사전 확인 + API 스펙 동기화
 
 ---
 
-1. **서브모듈 업데이트**:
+1. **Worktree 사용 여부** (AskUserQuestion)
+   - Worktree로 작업할지 + 브랜치명
+   - 선택 시: `git worktree add -b {브랜치명} ../{디렉토리명}-{브랜치명} origin/main`
+   - 이후 모든 작업은 worktree 디렉토리에서 진행
+
+2. **서브모듈 업데이트**:
    ```bash
    git submodule update --remote api-spec
    ```
 
-2. **타입 생성**:
+3. **타입 생성**:
    ```bash
    npm run generate:api
    ```
 
-3. **생성된 타입 확인**: `src/types/generated/` (DTO 자동 생성됨)
+4. **생성된 타입 확인**: `src/types/generated/` (DTO 자동 생성됨)
 
 # Phase 1: API 서비스 구현
 

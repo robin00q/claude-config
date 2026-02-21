@@ -8,6 +8,11 @@ description: 개발 워크플로우 스킬. 코드 구현 → 테스트 → 문�
 
 **⚠️ 요청된 작업에 해당하는 Phase부터 시작. (예: "도메인만 개발해주세요" → Phase 1부터 시작)**
 
+**⚠️ 커밋 시 api-spec 서브모듈 포인터(commit SHA) 변경분을 반드시 포함할 것.**
+- 커밋 전 `git submodule update --remote api-spec` 실행하여 최신화
+- `git add api-spec`으로 서브모듈 포인터 staging
+- `git status`에서 `api-spec` 변경분이 staged 상태인지 확인 후 커밋
+
 # 공통 규칙 로드 (필수)
 
 ---
@@ -21,8 +26,12 @@ description: 개발 워크플로우 스킬. 코드 구현 → 테스트 → 문�
 
 ---
 
-1. **Controller 작성 여부 확인** (AskUserQuestion)
-2. **Controller 작성 시**: 서브모듈 로컬 경로 질문 (기본값: `../wodly-api-spec/`)
+1. **Worktree 사용 여부** (AskUserQuestion)
+   - Worktree로 작업할지 + 브랜치명
+   - 선택 시: `git worktree add -b {브랜치명} ../{디렉토리명}-{브랜치명} origin/main`
+   - 이후 모든 작업은 worktree 디렉토리에서 진행
+2. **Controller 작성 여부 확인** (AskUserQuestion)
+3. **Controller 작성 시**: 서브모듈 로컬 경로 질문 (기본값: `../wodly-api-spec/`)
 
 # Phase 1: Domain 구현
 

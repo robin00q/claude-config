@@ -8,6 +8,7 @@
 | Mobile App | `./{project}-app/` | React Native 앱 |
 | API Spec | `./{project}-api-spec/` | OpenAPI 스펙 (서브모듈) |
 | IaC | `./{project}-iac/` | Terraform 인프라 (별도 git repo) |
+| Crawler | `./{project}-crawler/` | Instagram WOD 크롤러 (Python) |
 
 ## Skills 구조
 

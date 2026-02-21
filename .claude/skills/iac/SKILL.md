@@ -24,12 +24,17 @@ description: Terraform 인프라 개발 워크플로우. 리소스 설계 → �
 
 ---
 
-1. **요구사항 확인** (AskUserQuestion)
+1. **Worktree 사용 여부** (AskUserQuestion)
+   - Worktree로 작업할지 + 브랜치명
+   - 선택 시: `git worktree add -b {브랜치명} ../{디렉토리명}-{브랜치명} origin/main`
+   - 이후 모든 작업은 worktree 디렉토리에서 진행
+
+2. **요구사항 확인** (AskUserQuestion)
    - 추가/변경할 리소스 종류
    - 환경 (dev/prod)
    - 비용 제약사항
 
-2. **작업 디렉토리**: `wodly-iac/`
+3. **작업 디렉토리**: `wodly-iac/`
 
 # Phase 1: 설계
 
